@@ -7,23 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8847BCB9285CBA99006D88BC /* CountDown-App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCB7285CBA99006D88BC /* CountDown-App.xcdatamodeld */; };
+		8847BCF5285EA739006D88BC /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCF3285EA739006D88BC /* Event+CoreDataClass.swift */; };
+		8847BCF6285EA739006D88BC /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCF4285EA739006D88BC /* Event+CoreDataProperties.swift */; };
+		8847BCF8285EA8C5006D88BC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCF7285EA8C5006D88BC /* CoreDataManager.swift */; };
+		8847BCFC285FAF18006D88BC /* ArchivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCFB285FAF18006D88BC /* ArchivesViewController.swift */; };
 		88FDE911285A1B89001F5307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE910285A1B89001F5307 /* AppDelegate.swift */; };
 		88FDE913285A1B89001F5307 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE912285A1B89001F5307 /* SceneDelegate.swift */; };
-		88FDE915285A1B89001F5307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE914285A1B89001F5307 /* ViewController.swift */; };
+		88FDE915285A1B89001F5307 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE914285A1B89001F5307 /* EventViewController.swift */; };
 		88FDE918285A1B89001F5307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FDE916285A1B89001F5307 /* Main.storyboard */; };
 		88FDE91A285A1B8B001F5307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FDE919285A1B8B001F5307 /* Assets.xcassets */; };
 		88FDE91D285A1B8B001F5307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FDE91B285A1B8B001F5307 /* LaunchScreen.storyboard */; };
+		88FDE927285A2147001F5307 /* EventViewControllerDelegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE926285A2147001F5307 /* EventViewControllerDelegate+DataSource.swift */; };
+		88FDE92B285A23AB001F5307 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE929285A23AB001F5307 /* EventTableViewCell.swift */; };
+		88FDE92C285A23AB001F5307 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FDE92A285A23AB001F5307 /* EventTableViewCell.xib */; };
+		88FDE92E285A2B2D001F5307 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE92D285A2B2D001F5307 /* CountdownViewController.swift */; };
+		88FDE931285A3799001F5307 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE930285A3799001F5307 /* CardView.swift */; };
+		88FDE934285A37CF001F5307 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE933285A37CF001F5307 /* UIViewExtensions.swift */; };
+		88FDE937285A56BE001F5307 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE936285A56BE001F5307 /* Date.swift */; };
+		88FDE939285A5A34001F5307 /* Double Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE938285A5A34001F5307 /* Double Formatter.swift */; };
+		88FDE93B285A643C001F5307 /* Int Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE93A285A643C001F5307 /* Int Extension.swift */; };
+		88FDE93E285A71B9001F5307 /* AddCountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE93D285A71B9001F5307 /* AddCountdownViewController.swift */; };
+		88FDE943285AA235001F5307 /* AddImagesAndTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE942285AA235001F5307 /* AddImagesAndTextTableViewController.swift */; };
+		88FDE945285AA873001F5307 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE944285AA873001F5307 /* PhotoCollectionViewCell.swift */; };
+		88FDE947285AB352001F5307 /* KeyboardDismissExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE946285AB352001F5307 /* KeyboardDismissExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8847BCB8285CBA99006D88BC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8847BCF3285EA739006D88BC /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8847BCF4285EA739006D88BC /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8847BCF7285EA8C5006D88BC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8847BCFB285FAF18006D88BC /* ArchivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesViewController.swift; sourceTree = "<group>"; };
 		88FDE90D285A1B89001F5307 /* CountDown-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CountDown-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FDE910285A1B89001F5307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FDE912285A1B89001F5307 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88FDE914285A1B89001F5307 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88FDE914285A1B89001F5307 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		88FDE917285A1B89001F5307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88FDE919285A1B8B001F5307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88FDE91C285A1B8B001F5307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88FDE91E285A1B8B001F5307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FDE926285A2147001F5307 /* EventViewControllerDelegate+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventViewControllerDelegate+DataSource.swift"; sourceTree = "<group>"; };
+		88FDE929285A23AB001F5307 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		88FDE92A285A23AB001F5307 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		88FDE92D285A2B2D001F5307 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		88FDE930285A3799001F5307 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		88FDE933285A37CF001F5307 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		88FDE936285A56BE001F5307 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		88FDE938285A5A34001F5307 /* Double Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double Formatter.swift"; sourceTree = "<group>"; };
+		88FDE93A285A643C001F5307 /* Int Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int Extension.swift"; sourceTree = "<group>"; };
+		88FDE93D285A71B9001F5307 /* AddCountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountdownViewController.swift; sourceTree = "<group>"; };
+		88FDE942285AA235001F5307 /* AddImagesAndTextTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImagesAndTextTableViewController.swift; sourceTree = "<group>"; };
+		88FDE944285AA873001F5307 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		88FDE946285AB352001F5307 /* KeyboardDismissExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8847BCF9285EA916006D88BC /* ActualCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				88FDE92D285A2B2D001F5307 /* CountdownViewController.swift */,
+			);
+			path = ActualCountdown;
+			sourceTree = "<group>";
+		};
+		8847BCFA285FAEFB006D88BC /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				8847BCFB285FAF18006D88BC /* ArchivesViewController.swift */,
+			);
+			path = Archives;
+			sourceTree = "<group>";
+		};
 		88FDE904285A1B89001F5307 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +108,73 @@
 		88FDE90F285A1B89001F5307 /* CountDown-App */ = {
 			isa = PBXGroup;
 			children = (
-				88FDE910285A1B89001F5307 /* AppDelegate.swift */,
-				88FDE912285A1B89001F5307 /* SceneDelegate.swift */,
-				88FDE914285A1B89001F5307 /* ViewController.swift */,
-				88FDE916285A1B89001F5307 /* Main.storyboard */,
-				88FDE919285A1B8B001F5307 /* Assets.xcassets */,
+				8847BCF3285EA739006D88BC /* Event+CoreDataClass.swift */,
+				8847BCF4285EA739006D88BC /* Event+CoreDataProperties.swift */,
+				8847BCF7285EA8C5006D88BC /* CoreDataManager.swift */,
+				8847BCB7285CBA99006D88BC /* CountDown-App.xcdatamodeld */,
+				88FDE935285A37ED001F5307 /* App+Scene Delegate */,
+				88FDE932285A37C4001F5307 /* Extensions */,
+				88FDE928285A237F001F5307 /* EventListVC */,
+				8847BCF9285EA916006D88BC /* ActualCountdown */,
+				88FDE93C285A71A1001F5307 /* AddCountdown */,
+				8847BCFA285FAEFB006D88BC /* Archives */,
+				88FDE941285AA156001F5307 /* Images */,
 				88FDE91B285A1B8B001F5307 /* LaunchScreen.storyboard */,
+				88FDE919285A1B8B001F5307 /* Assets.xcassets */,
 				88FDE91E285A1B8B001F5307 /* Info.plist */,
 			);
 			path = "CountDown-App";
+			sourceTree = "<group>";
+		};
+		88FDE928285A237F001F5307 /* EventListVC */ = {
+			isa = PBXGroup;
+			children = (
+				88FDE914285A1B89001F5307 /* EventViewController.swift */,
+				88FDE926285A2147001F5307 /* EventViewControllerDelegate+DataSource.swift */,
+				88FDE92A285A23AB001F5307 /* EventTableViewCell.xib */,
+				88FDE929285A23AB001F5307 /* EventTableViewCell.swift */,
+			);
+			path = EventListVC;
+			sourceTree = "<group>";
+		};
+		88FDE932285A37C4001F5307 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88FDE933285A37CF001F5307 /* UIViewExtensions.swift */,
+				88FDE936285A56BE001F5307 /* Date.swift */,
+				88FDE938285A5A34001F5307 /* Double Formatter.swift */,
+				88FDE93A285A643C001F5307 /* Int Extension.swift */,
+				88FDE946285AB352001F5307 /* KeyboardDismissExtension.swift */,
+				88FDE930285A3799001F5307 /* CardView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88FDE935285A37ED001F5307 /* App+Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				88FDE910285A1B89001F5307 /* AppDelegate.swift */,
+				88FDE912285A1B89001F5307 /* SceneDelegate.swift */,
+			);
+			path = "App+Scene Delegate";
+			sourceTree = "<group>";
+		};
+		88FDE93C285A71A1001F5307 /* AddCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				88FDE93D285A71B9001F5307 /* AddCountdownViewController.swift */,
+				88FDE942285AA235001F5307 /* AddImagesAndTextTableViewController.swift */,
+				88FDE944285AA873001F5307 /* PhotoCollectionViewCell.swift */,
+			);
+			path = AddCountdown;
+			sourceTree = "<group>";
+		};
+		88FDE941285AA156001F5307 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				88FDE916285A1B89001F5307 /* Main.storyboard */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FDE92C285A23AB001F5307 /* EventTableViewCell.xib in Resources */,
 				88FDE91D285A1B8B001F5307 /* LaunchScreen.storyboard in Resources */,
 				88FDE91A285A1B8B001F5307 /* Assets.xcassets in Resources */,
 				88FDE918285A1B89001F5307 /* Main.storyboard in Resources */,
@@ -138,8 +249,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88FDE915285A1B89001F5307 /* ViewController.swift in Sources */,
+				88FDE92E285A2B2D001F5307 /* CountdownViewController.swift in Sources */,
+				88FDE937285A56BE001F5307 /* Date.swift in Sources */,
+				88FDE93B285A643C001F5307 /* Int Extension.swift in Sources */,
+				88FDE947285AB352001F5307 /* KeyboardDismissExtension.swift in Sources */,
+				8847BCF5285EA739006D88BC /* Event+CoreDataClass.swift in Sources */,
+				88FDE92B285A23AB001F5307 /* EventTableViewCell.swift in Sources */,
+				88FDE927285A2147001F5307 /* EventViewControllerDelegate+DataSource.swift in Sources */,
+				88FDE943285AA235001F5307 /* AddImagesAndTextTableViewController.swift in Sources */,
+				8847BCB9285CBA99006D88BC /* CountDown-App.xcdatamodeld in Sources */,
+				88FDE915285A1B89001F5307 /* EventViewController.swift in Sources */,
+				8847BCF6285EA739006D88BC /* Event+CoreDataProperties.swift in Sources */,
 				88FDE911285A1B89001F5307 /* AppDelegate.swift in Sources */,
+				88FDE931285A3799001F5307 /* CardView.swift in Sources */,
+				88FDE939285A5A34001F5307 /* Double Formatter.swift in Sources */,
+				88FDE945285AA873001F5307 /* PhotoCollectionViewCell.swift in Sources */,
+				8847BCFC285FAF18006D88BC /* ArchivesViewController.swift in Sources */,
+				88FDE934285A37CF001F5307 /* UIViewExtensions.swift in Sources */,
+				8847BCF8285EA8C5006D88BC /* CoreDataManager.swift in Sources */,
+				88FDE93E285A71B9001F5307 /* AddCountdownViewController.swift in Sources */,
 				88FDE913285A1B89001F5307 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +486,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8847BCB7285CBA99006D88BC /* CountDown-App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8847BCB8285CBA99006D88BC /* Model.xcdatamodel */,
+			);
+			currentVersion = 8847BCB8285CBA99006D88BC /* Model.xcdatamodel */;
+			name = "CountDown-App.xcdatamodeld";
+			path = "App+Scene Delegate/CountDown-App.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 88FDE905285A1B89001F5307 /* Project object */;
 }
