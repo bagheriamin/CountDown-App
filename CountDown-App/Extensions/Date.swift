@@ -30,7 +30,7 @@ extension Date {
         return dateformat.string(from: self)
     }
     
-    func withAddedMinutes(minutes: Double) -> Date {
+    func withRemovedMinutes(minutes: Double) -> Date {
         addingTimeInterval(minutes * -60)
     }
 }

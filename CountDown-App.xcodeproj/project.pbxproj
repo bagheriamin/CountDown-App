@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8847BCB9285CBA99006D88BC /* CountDown-App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCB7285CBA99006D88BC /* CountDown-App.xcdatamodeld */; };
-		8847BCF5285EA739006D88BC /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCF3285EA739006D88BC /* Event+CoreDataClass.swift */; };
-		8847BCF6285EA739006D88BC /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCF4285EA739006D88BC /* Event+CoreDataProperties.swift */; };
 		8847BCF8285EA8C5006D88BC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCF7285EA8C5006D88BC /* CoreDataManager.swift */; };
 		8847BCFC285FAF18006D88BC /* ArchivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCFB285FAF18006D88BC /* ArchivesViewController.swift */; };
+		8847BCFF285FEAA9006D88BC /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847BCFD285FEAA9006D88BC /* Event+CoreDataClass.swift */; };
 		88FDE911285A1B89001F5307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE910285A1B89001F5307 /* AppDelegate.swift */; };
 		88FDE913285A1B89001F5307 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE912285A1B89001F5307 /* SceneDelegate.swift */; };
 		88FDE915285A1B89001F5307 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDE914285A1B89001F5307 /* EventViewController.swift */; };
@@ -35,10 +34,9 @@
 
 /* Begin PBXFileReference section */
 		8847BCB8285CBA99006D88BC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		8847BCF3285EA739006D88BC /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8847BCF4285EA739006D88BC /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8847BCF7285EA8C5006D88BC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8847BCFB285FAF18006D88BC /* ArchivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesViewController.swift; sourceTree = "<group>"; };
+		8847BCFD285FEAA9006D88BC /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		88FDE90D285A1B89001F5307 /* CountDown-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CountDown-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FDE910285A1B89001F5307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FDE912285A1B89001F5307 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +90,7 @@
 		88FDE904285A1B89001F5307 = {
 			isa = PBXGroup;
 			children = (
+				8847BCFD285FEAA9006D88BC /* Event+CoreDataClass.swift */,
 				88FDE90F285A1B89001F5307 /* CountDown-App */,
 				88FDE90E285A1B89001F5307 /* Products */,
 			);
@@ -108,8 +107,6 @@
 		88FDE90F285A1B89001F5307 /* CountDown-App */ = {
 			isa = PBXGroup;
 			children = (
-				8847BCF3285EA739006D88BC /* Event+CoreDataClass.swift */,
-				8847BCF4285EA739006D88BC /* Event+CoreDataProperties.swift */,
 				8847BCF7285EA8C5006D88BC /* CoreDataManager.swift */,
 				8847BCB7285CBA99006D88BC /* CountDown-App.xcdatamodeld */,
 				88FDE935285A37ED001F5307 /* App+Scene Delegate */,
@@ -118,8 +115,8 @@
 				8847BCF9285EA916006D88BC /* ActualCountdown */,
 				88FDE93C285A71A1001F5307 /* AddCountdown */,
 				8847BCFA285FAEFB006D88BC /* Archives */,
-				88FDE941285AA156001F5307 /* Images */,
 				88FDE91B285A1B8B001F5307 /* LaunchScreen.storyboard */,
+				88FDE916285A1B89001F5307 /* Main.storyboard */,
 				88FDE919285A1B8B001F5307 /* Assets.xcassets */,
 				88FDE91E285A1B8B001F5307 /* Info.plist */,
 			);
@@ -167,14 +164,6 @@
 				88FDE944285AA873001F5307 /* PhotoCollectionViewCell.swift */,
 			);
 			path = AddCountdown;
-			sourceTree = "<group>";
-		};
-		88FDE941285AA156001F5307 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				88FDE916285A1B89001F5307 /* Main.storyboard */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,13 +242,12 @@
 				88FDE937285A56BE001F5307 /* Date.swift in Sources */,
 				88FDE93B285A643C001F5307 /* Int Extension.swift in Sources */,
 				88FDE947285AB352001F5307 /* KeyboardDismissExtension.swift in Sources */,
-				8847BCF5285EA739006D88BC /* Event+CoreDataClass.swift in Sources */,
 				88FDE92B285A23AB001F5307 /* EventTableViewCell.swift in Sources */,
+				8847BCFF285FEAA9006D88BC /* Event+CoreDataClass.swift in Sources */,
 				88FDE927285A2147001F5307 /* EventViewControllerDelegate+DataSource.swift in Sources */,
 				88FDE943285AA235001F5307 /* AddImagesAndTextTableViewController.swift in Sources */,
 				8847BCB9285CBA99006D88BC /* CountDown-App.xcdatamodeld in Sources */,
 				88FDE915285A1B89001F5307 /* EventViewController.swift in Sources */,
-				8847BCF6285EA739006D88BC /* Event+CoreDataProperties.swift in Sources */,
 				88FDE911285A1B89001F5307 /* AppDelegate.swift in Sources */,
 				88FDE931285A3799001F5307 /* CardView.swift in Sources */,
 				88FDE939285A5A34001F5307 /* Double Formatter.swift in Sources */,

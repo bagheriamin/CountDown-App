@@ -71,13 +71,16 @@ extension CoreDataManager {
         event.id = UUID()
         event.endDate = endDate
         event.startDate = Date()
+        event.isFinished = false
         save()
         return event
         
     }
     
-    func fetchEvents(filter: String? = nil) -> [Event] {
+    func fetchEvents(filter: Bool? = nil) -> [Event] {
         let request: NSFetchRequest<Event> = Event.fetchRequest()
+        
+        
         
         return (try? viewContext.fetch(request)) ?? []
     }

@@ -10,19 +10,24 @@ import UserNotifications
 
 class EventViewController: UIViewController {
 
-    
+    var timer = Timer()
 //    819936000
     
     var events: [Event] = []
+    var unfinishedEvents: [Event] = []
     
-    let notificationCenter = UNUserNotificationCenter.current()
     
     @IBOutlet var tableView: UITableView!
+    
+    let center = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        notificationCenter.requestAuthorization(options: [.alert, .sound]) { permissionGranted, error in
+//        unfinishedEvents = events
+        
+        
+        center.requestAuthorization(options: [.alert, .sound]) { permissionGranted, error in
             
         }
         
@@ -34,8 +39,49 @@ class EventViewController: UIViewController {
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+    
+    func checkForFinishedTasks() {
+        
+            for event in events {
+                print("The event you're looking for: ", event)
+                print("The end date of that event: ", event.endDate)
+                guard event.endDate != nil else {
+                    CoreDataManager.shared.deleteEvents(event)
+                    return
+                }
+                if Date.now > event.endDate! {
+                    event.isFinished = true
+                    CoreDataManager.shared.save()
+                    tableView.reloadData()
+                    if unfinishedEvents.contains(event) {
+                        let index = unfinishedEvents.firstIndex(of: event)
+                        unfinishedEvents.remove(at: index!)
+                        CoreDataManager.shared.save()
+                        tableView.reloadData()
+                    }
+                    
+                    
+                } else {
+                    if !unfinishedEvents.contains(event) {
+                        print("Added \(event.name!) to unfinished events")
+                        unfinishedEvents.append(event)
+                        tableView.reloadData()
+                    }
+                    
+                }
+            }
+        
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        print(events)
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] _ in
+            self?.checkForFinishedTasks()
+        })
+      
         events = CoreDataManager.shared.fetchEvents()
     }
     
@@ -47,12 +93,40 @@ class EventViewController: UIViewController {
         events.append(event)
         tableView.reloadData()
         
+        //ask for authorization
+        
+        // create content
         let content = UNMutableNotificationContent()
-        content.title = "Starting soon. "
-        // Use data from the view controller which initiated the unwind segue
+        content.title = name
+        content.body = "Starting soon..."
+        
+        // create notification trigger
+        let notificationDate = date.withRemovedMinutes(minutes: 10)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: notificationDate)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        // create notification request
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        
+        // register request with notification center
+        center.add(request) { error in
+            if let error = error {
+                print("Error: ", error.localizedDescription)
+            } else {
+                print("notification set up successfully for \(event)")
+            }
+        }
+        
+        
     }
     
-    var editButtonPressed: Bool = false
+    var editButtonPressed: Bool = false {
+        didSet {
+            print("Table View is editing: ",editButtonPressed)            
+        }
+    }
     @IBOutlet var editButton: UIBarButtonItem!
     @IBAction func editButtonPressed(_ sender: Any) {
         editButtonPressed.toggle()
@@ -62,26 +136,6 @@ class EventViewController: UIViewController {
             editButton.title = "Edit"
         }
         self.tableView.isEditing = !self.tableView.isEditing
-        
-        
-    }
-    
-    func deleteEventFromStorage(_ event: Event) {
-        deleteEvent(with: event.id!)
-        CoreDataManager.shared.deleteEvents(event)
-        // Update the list
-        
-    }
-    
-    private func indexForEvent(id: UUID, in list: [Event]) -> IndexPath {
-        let row = Int(list.firstIndex(where: { $0.id == id }) ?? 0)
-        return IndexPath(row: row, section: 0)
-    }
-    
-    func deleteEvent(with id: UUID) {
-        let indexPath = indexForEvent(id: id, in: events)
-        events.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
         
         
     }

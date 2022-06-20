@@ -209,7 +209,7 @@ until…</string>
             </objects>
             <point key="canvasLocation" x="-668.11594202898561" y="837.72321428571422"/>
         </scene>
-        <!--Archives-->
+        <!--Past Events-->
         <scene sceneID="8uo-oT-LJQ">
             <objects>
                 <viewController id="8Jy-f5-6He" customClass="ArchivesViewController" customModule="CountDown_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -218,8 +218,38 @@ until…</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CRg-vS-Qc6">
-                                <rect key="frame" x="0.0" y="140" width="428" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="hxe-xV-Nlo" detailTextLabel="s2t-fs-Igv" style="IBUITableViewCellStyleSubtitle" id="47a-SB-A0G">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="47a-SB-A0G" id="OrS-yN-LtD">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hxe-xV-Nlo">
+                                                    <rect key="frame" x="20" y="7.0000000000000009" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2t-fs-Igv">
+                                                    <rect key="frame" x="19.999999999999996" y="23.333333333333336" width="40.666666666666664" height="13.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Jy-f5-6He" id="Ybh-Wn-jQz"/>
+                                    <outlet property="delegate" destination="8Jy-f5-6He" id="RHd-K5-hww"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PlL-Ns-HMS"/>
@@ -231,7 +261,17 @@ until…</string>
                             <constraint firstItem="CRg-vS-Qc6" firstAttribute="bottom" secondItem="PlL-Ns-HMS" secondAttribute="bottom" id="fJ4-q9-t7E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Archives" id="GEh-TE-5rS"/>
+                    <navigationItem key="navigationItem" title="Past Events" id="GEh-TE-5rS">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" style="plain" id="bNp-fB-bPl">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="8Jy-f5-6He" id="pw4-EY-dif"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="bNp-fB-bPl" id="nrg-up-nn5"/>
+                        <outlet property="tableView" destination="CRg-vS-Qc6" id="8J6-Si-qVg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCg-13-4lc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

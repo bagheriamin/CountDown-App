@@ -11,20 +11,20 @@ import UIKit
 extension EventViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return unfinishedEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.identifier, for: indexPath) as! EventTableViewCell
         
-        cell.setUp(event: events[indexPath.row])
+        cell.setUp(event: unfinishedEvents[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let controller = storyboard?.instantiateViewController(withIdentifier: "CountdownViewController") as! CountdownViewController
         controller.navigationItem.largeTitleDisplayMode = .never
-        controller.event = events[indexPath.row]
+        controller.event = unfinishedEvents[indexPath.row]
         
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -50,7 +50,11 @@ extension EventViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteEventFromStorage(events[indexPath.row])
+            CoreDataManager.shared.deleteEvents(unfinishedEvents[indexPath.row])
+            
+            unfinishedEvents.remove(at: indexPath.row)
+            tableView.reloadData()
+            
         }
     }
     
